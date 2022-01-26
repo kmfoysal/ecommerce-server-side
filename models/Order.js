@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const OrderSchema = new mongoose.Schema(
     {
         userId: {type:String, required:true},
+        name: {type:String, required:true},
         products:[
             {
                 productId: {
@@ -11,6 +12,10 @@ const OrderSchema = new mongoose.Schema(
                 quantity: {
                     type: Number,
                     default:1
+                },
+                color: {
+                    type: String,
+                    default:''
                 }
             }
         ],
