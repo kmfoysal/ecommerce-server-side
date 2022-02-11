@@ -36,6 +36,9 @@ app.use('/', cartRoute);
 app.use('/', orderRoute);
 app.use('/', paymentRoute);
 
+app.get('/', (req, res)=>{
+    res.send('Welcom to shop');
+})
 
 app.listen(port, ()=>{
     console.log('Server is Running at Port', port);
